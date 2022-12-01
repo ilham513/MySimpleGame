@@ -1,96 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://KinematicBody2D.tscn" type="PackedScene" id=1]
-[ext_resource path="res://sprites/Ground 00.png" type="Texture" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 9, 8 )
+[ext_resource path="res://ground tileset.tres" type="TileSet" id=2]
 
 [node name="StageOne" type="Node2D"]
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( 24, 78 )
 
-[node name="Ground00" type="Sprite" parent="."]
-position = Vector2( 9, 101 )
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Ground00"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground00/StaticBody2D"]
-shape = SubResource( 1 )
-
-[node name="Ground01" type="Sprite" parent="."]
-position = Vector2( 27, 101 )
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Ground01"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground01/StaticBody2D"]
-shape = SubResource( 1 )
-
-[node name="Ground02" type="Sprite" parent="."]
-position = Vector2( 45, 117 )
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Ground02"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground02/StaticBody2D"]
-shape = SubResource( 1 )
-
-[node name="Ground03" type="Sprite" parent="."]
-position = Vector2( 63, 117 )
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Ground03"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground03/StaticBody2D"]
-shape = SubResource( 1 )
-
-[node name="Ground04" type="Sprite" parent="."]
-position = Vector2( 81, 117 )
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Ground04"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground04/StaticBody2D"]
-shape = SubResource( 1 )
-
-[node name="Ground05" type="Sprite" parent="."]
-position = Vector2( 99, 117 )
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Ground05"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground05/StaticBody2D"]
-shape = SubResource( 1 )
-
-[node name="Ground06" type="Sprite" parent="."]
-position = Vector2( 117, 117 )
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Ground06"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground06/StaticBody2D"]
-shape = SubResource( 1 )
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 196627, 10, 0, 262151, -1073741821, 0, 262152, 0, 0, 262153, 0, 0, 262154, -1610612732, 0, 262163, 11, 0, 327687, 1610612739, 0, 327688, 1610612743, 0, 327689, 1610612743, 0, 327690, 1610612740, 0, 327699, 11, 0, 393216, 4, 0, 393217, 0, 0, 393228, 10, 0, 393235, 11, 0, 458752, 1, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 3, 0, 458764, 11, 0, 458771, 11, 0, 524288, 7, 0, 524289, 7, 0, 524290, 7, 0, 524291, 7, 0, 524292, 7, 0, 524293, 7, 0, 524294, 2, 0, 524295, 2, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 2, 0, 524300, 1, 0, 524301, 1, 0, 524302, 1, 0, 524303, 1, 0, 524304, 1, 0, 524305, 1, 0, 524306, 1, 0, 524307, 1, 0, 589824, 7, 0, 589825, 7, 0, 589826, 7, 0, 589827, 7, 0, 589828, 7, 0, 589829, 7, 0, 589830, 7, 0, 589831, 7, 0, 589832, 7, 0, 589833, 7, 0, 589834, 7, 0, 589835, 7, 0, 589836, 7, 0, 589837, 7, 0, 589838, 7, 0, 589839, 7, 0, 589840, 7, 0, 589841, 7, 0, 589842, 7, 0, 589843, 7, 0, 655360, 7, 0, 655361, 7, 0, 655362, 7, 0, 655363, 7, 0, 655364, 7, 0, 655365, 7, 0, 655366, 7, 0, 655367, 7, 0, 655368, 7, 0, 655369, 7, 0, 655370, 7, 0, 655371, 7, 0, 655372, 7, 0, 655373, 7, 0, 655374, 7, 0, 655375, 7, 0, 655376, 7, 0, 655377, 7, 0, 655378, 7, 0, 655379, 7, 0 )
